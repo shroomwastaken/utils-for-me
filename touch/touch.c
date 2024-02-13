@@ -2,7 +2,7 @@
 
 int main(int argc, char* argv[]) {
 	if (argc < 2) {
-		printf("usage: touch <file name>");
+		printf("usage: touch <file name>\n");
 		return 1;
 	}
 
