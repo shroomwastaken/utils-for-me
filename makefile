@@ -1,10 +1,13 @@
-all : copyf touch ls
+all : output copyf touch ls
 
-copyf : copyf/copyf.c
-	gcc -o copyf copyf/copyf.c
+output :
+	mkdir output
 
-touch : touch/touch.c
-	gcc -o touch touch/touch.c
+copyf : output copyf/copyf.c
+	gcc -o output/copyf copyf/copyf.c
 
-ls : ls/ls.c
-	gcc -o ls ls/ls.c
+touch : output touch/touch.c
+	gcc -o output/touch touch/touch.c
+
+ls : output ls/ls.c
+	gcc -o output/ls ls/ls.c
