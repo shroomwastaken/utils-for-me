@@ -1,4 +1,4 @@
-all : output copyf touch ls
+all : output copyf touch ls soulcalc
 
 output :
 	mkdir output
@@ -11,3 +11,6 @@ touch : output touch/touch.c
 
 ls : output ls/ls.c
 	gcc -o output/ls ls/ls.c
+
+soulcalc : output soulcalc/soulcalc.c
+	gcc -o output/soulcalc soulcalc/soulcalc.c
